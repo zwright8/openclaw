@@ -16,7 +16,6 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-
 DEFAULT_DOMAINS = [
     "executive",
     "product-management",

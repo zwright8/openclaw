@@ -13,7 +13,6 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-
 SEVERITY_ORDER = ["NONE", "LOW", "MEDIUM", "HIGH", "CRITICAL"]
 SEVERITY_RANK = {name: idx for idx, name in enumerate(SEVERITY_ORDER)}
 

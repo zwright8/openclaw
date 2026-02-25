@@ -10,7 +10,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-
 SEVERITY_PRIORITY = {"CRITICAL": 4, "HIGH": 3, "MEDIUM": 2, "LOW": 1, "NONE": 0}
 
 
