@@ -37,7 +37,13 @@ describe("buildWorkspaceSkillsPrompt", () => {
     workspaceDir: string,
     opts?: Parameters<typeof buildWorkspaceSkillsPrompt>[1],
   ) =>
-    withEnv({ HOME: workspaceDir, PATH: "" }, () => buildWorkspaceSkillsPrompt(workspaceDir, opts));
+    withEnv({ HOME: workspaceDir, PATH: "" }, () =>
+      buildWorkspaceSkillsPrompt(workspaceDir, {
+        managedSkillsDir: path.join(workspaceDir, ".managed"),
+        bundledSkillsDir: path.join(workspaceDir, ".bundled"),
+        ...opts,
+      }),
+    );
 
   it("syncs merged skills into a target workspace", async () => {
     const sourceWorkspace = await createCaseDir("source");
